@@ -58,7 +58,7 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Revenue</p>
+                      <p className="card-category">Sales</p>
                       <Card.Title as="h4">$ 1,345</Card.Title>
                     </div>
                   </Col>
@@ -84,7 +84,7 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Errors</p>
+                      <p className="card-category">Pending Order</p>
                       <Card.Title as="h4">23</Card.Title>
                     </div>
                   </Col>
@@ -127,8 +127,8 @@ function Dashboard() {
           </Col>
         </Row>
         <Row>
-          <Col md="8">
-            <Card>
+          {/* <Col md="8"> */}
+            {/* <Card>
               <Card.Header>
                 <Card.Title as="h4">Users Behavior</Card.Title>
                 <p className="card-category">24 Hours performance</p>
@@ -198,9 +198,9 @@ function Dashboard() {
                   Updated 3 minutes ago
                 </div>
               </Card.Footer>
-            </Card>
-          </Col>
-          <Col md="4">
+            </Card> */}
+          {/* </Col> */}
+          {/* <Col md="4">
             <Card>
               <Card.Header>
                 <Card.Title as="h4">Email Statistics</Card.Title>
@@ -232,7 +232,7 @@ function Dashboard() {
                 </div>
               </Card.Body>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
         <Row>
           <Col md="6">
