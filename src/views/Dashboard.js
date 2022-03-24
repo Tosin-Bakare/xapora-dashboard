@@ -26,14 +26,14 @@ function Dashboard() {
               <Card.Body>
                 <Row>
                   <Col xs="5">
-                    <div className="icon-big text-center icon-warning">
-                      <i className="nc-icon nc-chart text-warning"></i>
+                       <div className="icon-big text-center icon-warning">
+                      <i className="nc-icon nc-money-coins text-success"></i>
                     </div>
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Number</p>
-                      <Card.Title as="h4">150GB</Card.Title>
+                      <p className="card-category">Sales</p>
+                      <Card.Title as="h4">$ 1,345</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -53,13 +53,13 @@ function Dashboard() {
                 <Row>
                   <Col xs="5">
                     <div className="icon-big text-center icon-warning">
-                      <i className="nc-icon nc-light-3 text-success"></i>
+                      <i className="nc-icon nc-cart-simple text-success"></i>
                     </div>
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Sales</p>
-                      <Card.Title as="h4">$ 1,345</Card.Title>
+                      <p className="card-category">New Orders</p>
+                      <Card.Title as="h4">12</Card.Title>
                     </div>
                   </Col>
                 </Row>
@@ -79,12 +79,12 @@ function Dashboard() {
                 <Row>
                   <Col xs="5">
                     <div className="icon-big text-center icon-warning">
-                      <i className="nc-icon nc-vector text-danger"></i>
+                      <i className="nc-icon nc-notes text-danger"></i>
                     </div>
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Pending Order</p>
+                      <p className="card-category">Pending reviews</p>
                       <Card.Title as="h4">23</Card.Title>
                     </div>
                   </Col>
@@ -110,7 +110,7 @@ function Dashboard() {
                   </Col>
                   <Col xs="7">
                     <div className="numbers">
-                      <p className="card-category">Followers</p>
+                      <p className="card-category">New Customers</p>
                       <Card.Title as="h4">+45K</Card.Title>
                     </div>
                   </Col>

@@ -13,12 +13,12 @@ import {
   Col,
 } from "react-bootstrap";
 
-function TableList() {
+function Department() {
   return (
     <>
       <Container fluid>
         <Row>
-          <Col md="12">
+          {/* <Col md="12">
             <Card className="strpied-tabled-with-hover">
               <Card.Header>
                 <Card.Title as="h4">Striped Table with Hover</Card.Title>
@@ -84,14 +84,22 @@ function TableList() {
                 </Table>
               </Card.Body>
             </Card>
-          </Col>
+          </Col> */}
           <Col md="12">
             <Card className="card-plain table-plain-bg">
-              <Card.Header>
+            <Card.Header className="d-flex flex-row justify-content-between">
+                <div>
                 <Card.Title as="h4">Table on Plain Background</Card.Title>
                 <p className="card-category">
                   Here is a subtitle for this table
                 </p>
+                </div>
+                <button className=" btn bg-dark text-white pl-4 pr-4 rounded-sm cursor-pointer">
+                  <i
+                    className="nc-icon nc-simple-add text-white"
+                  ></i>{" "}
+                  Add
+                </button>
               </Card.Header>
               <Card.Body className="table-full-width table-responsive px-0">
                 <Table className="table-hover">
@@ -158,4 +166,4 @@ function TableList() {
   );
 }
 
-export default TableList;
+export default Department;

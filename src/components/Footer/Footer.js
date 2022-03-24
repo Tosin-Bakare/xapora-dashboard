@@ -40,11 +40,11 @@ class Footer extends Component {
                   Portfolio
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
                   Blog
                 </a>
-              </li>
+              </li> */}
             </ul>
             <p className="copyright text-center">
               © {new Date().getFullYear()}{" "}
