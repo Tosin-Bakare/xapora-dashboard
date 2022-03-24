@@ -27,13 +27,19 @@ import "./assets/css/demo.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import AdminLayout from "layouts/Admin.js";
+import { persistor } from "store/configureStore";
+import { PersistGate } from "redux-persist/integration/react";
+import { Provider } from "react-redux";
+import { store } from "store/configureStore";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <Switch>
-      <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-      <Redirect from="/" to="/admin/dashboard" />
-    </Switch>
-  </BrowserRouter>,
+  <Provider store={store}>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+          <Redirect from="/" to="/admin/dashboard" />
+        </Switch>
+      </BrowserRouter>
+  </Provider>,
   document.getElementById("root")
 );

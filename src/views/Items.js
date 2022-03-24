@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // react-bootstrap components
 import {
@@ -12,8 +12,21 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
+import { getItems } from "store/items";
+import { fetchItems } from "store/items";
 
-function Items () {
+function Items() {
+  const dispatch = useDispatch();
+  const itemData = useSelector(fetchItems);
+
+  console.log(itemData);
+  const getAllItems = () => {
+    dispatch(getItems());
+  };
+  useEffect(() => {
+    getAllItems();
+  }, []);
   return (
     <>
       <Container fluid>
@@ -22,16 +35,13 @@ function Items () {
             <Card className="card-plain table-plain-bg">
               <Card.Header className="d-flex flex-row justify-content-between">
                 <div>
-                <Card.Title as="h4">Table on Plain Background</Card.Title>
-                <p className="card-category">
-                  Here is a subtitle for this table
-                </p>
+                  <Card.Title as="h4">Table on Plain Background</Card.Title>
+                  <p className="card-category">
+                    Here is a subtitle for this table
+                  </p>
                 </div>
                 <button className=" btn bg-dark text-white pl-4 pr-4 rounded-sm cursor-pointer">
-                  <i
-                    className="nc-icon nc-simple-add text-white"
-                  ></i>{" "}
-                  Add
+                  <i className="nc-icon nc-simple-add text-white"></i> Add
                 </button>
               </Card.Header>
               <Card.Body className="table-full-width table-responsive px-0">
