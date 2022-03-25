@@ -25,21 +25,22 @@ import "./assets/css/animate.min.css";
 import "./assets/scss/light-bootstrap-dashboard-react.scss?v=2.0.0";
 import "./assets/css/demo.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { loadProgressBar } from 'axios-progress-bar'
 
 import AdminLayout from "layouts/Admin.js";
-import { persistor } from "store/configureStore";
-import { PersistGate } from "redux-persist/integration/react";
 import { Provider } from "react-redux";
-import { store } from "store/configureStore";
+import { store } from "./store/configureStore";
+
+loadProgressBar();
 
 ReactDOM.render(
-  <Provider store={store}>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
-          <Redirect from="/" to="/admin/dashboard" />
-        </Switch>
-      </BrowserRouter>
-  </Provider>,
+  <BrowserRouter>
+    <Provider store={store}>
+      <Switch>
+        <Route path="/admin" render={(props) => <AdminLayout {...props} />} />
+        <Redirect from="/" to="/admin/dashboard" />
+      </Switch>
+    </Provider>
+  </BrowserRouter>,
   document.getElementById("root")
 );
