@@ -1,4 +1,4 @@
-import { combineReducers } from "@reduxjs/toolkit";
+import { combineReducers } from "redux";
 import item from "./items";
 import category from "./category";
 import department from "./department";

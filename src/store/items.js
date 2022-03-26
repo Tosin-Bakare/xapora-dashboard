@@ -5,10 +5,8 @@ const slice = createSlice({
     name: 'item',
     initialState: {
         loading: false,
-
         // success
         fetched: false,
-
         //failure
         failed: false,
         // data
@@ -21,7 +19,7 @@ const slice = createSlice({
             item.failed = false;
             item.data = null;
         },
-        
+
         fetchItemsStart: item => {
             item.loading = true;
         },
@@ -35,7 +33,7 @@ const slice = createSlice({
 
         fetchItemsFail: (item, action) => {
             item.loading = false;
-            itemFetched = false;
+            item.Fetched = false;
             item.data = action.payload;
             item.failed = true;
         },
@@ -49,16 +47,14 @@ const {
 } = slice.actions
 
 export const getItems = () => (dispatch) => {
-    dispatch(
-        apiCallBegan({
-            url: "/all?limit=10&offset=0",
-            method: 'get',
-            type: 'item',
-            onStart: fetchItemsStart.type,
-            onSuccess: fetchItemsSuccess.type,
-            onError: fetchItemsFail.type
-        })
-    )
+    dispatch(apiCallBegan({
+        url: "all?limit=10&offset=0",
+        method: 'get',
+        type: 'item',
+        onStart: fetchItemsStart.type,
+        onSuccess: fetchItemsSuccess.type,
+        onError: fetchItemsFail.type
+    }))
 }
 
 export const fetchItems = createSelector(

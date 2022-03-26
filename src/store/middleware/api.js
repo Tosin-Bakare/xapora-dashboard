@@ -19,32 +19,38 @@ const getBaseURL = (reqType) => {
 };
 
 const api =
-  ({ dispatch, getState }) =>
-  (next) => {
-    async (action) => {
-      if (action.type !== actions.apiCallBegan) return next(action);
+  ({ dispatch }) =>
+    (next) =>
+      async (action) => {
+        if (action.type !== actions.apiCallBegan.type) return next(action);
 
-      const { url, method, data, onSuccess, onStart, onError, type } =
-        action.payload;
+        const { url, method, data, onSuccess, onStart, onError, type } =
+          action.payload;
 
-      if (onStart) dispatch({ type: onStart });
-      next(action);
+        if (onStart) dispatch({ type: onStart });
+        next(action);
 
-      try {
-        const response = await axios.request({
-          baseUrl: getBaseURL(type),
-          url,
-          method,
-        });
+        try {
+          const response = await axios.request({
+            baseURL: getBaseURL(type),
+            url,
+            data,
+            method,
+          });
 
-        dispatch(actions.apiCallSuccess(response.data));  
-      } catch (e) {
-        // General
-        dispatch(actions.apiCallFailed(e?.response?.data?.message));
+          // General
+          dispatch(actions.apiCallSuccess(response.data));
 
-        //Specific
-        dispatch({ type: onError, payload: e?.response?.data?.message });
-      }
-    };
-  };
+          //specific
+          if (onSuccess) dispatch({ type: onSuccess, payload: response.data });
+
+        } catch (e) {
+          // General
+          dispatch(actions.apiCallFailed(e?.response?.data?.message));
+
+          //Specific
+          if (onError)
+            dispatch({ type: onError, payload: e?.response?.data?.message });
+        }
+      };
 export default api;

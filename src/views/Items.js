@@ -12,7 +12,9 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { hey } from "store/items";
 import { getItems } from "store/items";
 import { fetchItems } from "store/items";
 
@@ -20,13 +22,14 @@ function Items() {
   const dispatch = useDispatch();
   const itemData = useSelector(fetchItems);
 
-  console.log(itemData);
   const getAllItems = () => {
     dispatch(getItems());
   };
   useEffect(() => {
     getAllItems();
   }, []);
+
+
   return (
     <>
       <Container fluid>
