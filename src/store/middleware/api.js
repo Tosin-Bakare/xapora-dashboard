@@ -5,7 +5,11 @@ const getBaseURL = (reqType) => {
   let baseURL = "https://xapora.herokuapp.com/api/v1";
   switch (reqType) {
     case "item":
+    case "category":
+    case "department":
       baseURL += "/item";
+      baseURL += "/category";
+      baseURL += "/department";
       break;
     default:
       baseURL += "/department";
