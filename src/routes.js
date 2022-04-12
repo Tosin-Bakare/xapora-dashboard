@@ -52,7 +52,7 @@ const dashboardRoutes = [
   {
     path: "/department",
     name: "Department",
-    icon: "nc-icon nc-notes",
+    icon: "nc-icon nc-bank",
     component: Department,
     layout: "/admin",
   },
@@ -66,7 +66,7 @@ const dashboardRoutes = [
   {
     path: "/items",
     name: "Items",
-    icon: "nc-icon nc-notes",
+    icon: "nc-icon nc-backpack",
     component: Items,
     layout: "/admin",
   },

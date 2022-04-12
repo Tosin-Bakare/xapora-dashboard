@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.249cad21.chunk.css",
+    "main.js": "/static/js/main.7e1f98a9.chunk.js",
+    "main.js.map": "/static/js/main.7e1f98a9.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.bf51f70d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.bf51f70d.js.map",
+    "static/css/2.dd5f8600.chunk.css": "/static/css/2.dd5f8600.chunk.css",
+    "static/js/2.4e19918e.chunk.js": "/static/js/2.4e19918e.chunk.js",
+    "static/js/2.4e19918e.chunk.js.map": "/static/js/2.4e19918e.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.dd5f8600.chunk.css.map": "/static/css/2.dd5f8600.chunk.css.map",
+    "static/css/main.249cad21.chunk.css.map": "/static/css/main.249cad21.chunk.css.map",
+    "static/js/2.4e19918e.chunk.js.LICENSE.txt": "/static/js/2.4e19918e.chunk.js.LICENSE.txt",
+    "static/js/main.7e1f98a9.chunk.js.LICENSE.txt": "/static/js/main.7e1f98a9.chunk.js.LICENSE.txt",
+    "static/media/XAPORA TRANSPERENT 2.png": "/static/media/XAPORA TRANSPERENT 2.8f52c9dc.png",
+    "static/media/XAPORA TRANSPERENT blck.236198da.png": "/static/media/XAPORA TRANSPERENT blck.236198da.png",
+    "static/media/all.min.css": "/static/media/fa-solid-900.f4f93856.woff",
+    "static/media/light-bootstrap-dashboard-react.scss?v=2.0.0": "/static/media/nucleo-icons.a30d0b02.ttf",
+    "static/media/sidebar-3.9992d0ce.jpg": "/static/media/sidebar-3.9992d0ce.jpg",
+    "static/media/sidebar-4.b7eb4d1b.jpg": "/static/media/sidebar-4.b7eb4d1b.jpg",
+    "static/media/xapora-female.6612aa3d.jpg": "/static/media/xapora-female.6612aa3d.jpg",
+    "static/media/xapora-male.79f6aa09.jpg": "/static/media/xapora-male.79f6aa09.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bf51f70d.js",
+    "static/css/2.dd5f8600.chunk.css",
+    "static/js/2.4e19918e.chunk.js",
+    "static/css/main.249cad21.chunk.css",
+    "static/js/main.7e1f98a9.chunk.js"
+  ]
+}

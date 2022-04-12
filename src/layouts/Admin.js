@@ -15,7 +15,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React, { Component } from "react";
+import React from "react";
 import { useLocation, Route, Switch } from "react-router-dom";
 
 import AdminNavbar from "components/Navbars/AdminNavbar";
@@ -26,6 +26,7 @@ import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 import routes from "routes.js";
 
 import sidebarImage from "assets/img/sidebar-3.jpg";
+import Auth from "./Auth/auth";
 
 function Admin() {
   const [image, setImage] = React.useState(sidebarImage);
@@ -33,7 +34,16 @@ function Admin() {
   const [hasImage, setHasImage] = React.useState(true);
   const location = useLocation();
   const mainPanel = React.useRef(null);
+
+  const user = {
+    loggedIn: false
+  }
+
+  // useEffect(()=> {}, [user])
   const getRoutes = (routes) => {
+    if(!user.loggedIn) {
+      return<Route path="/" component={Auth} />
+    }
     return routes.map((prop, key) => {
       if (prop.layout === "/admin") {
         return (
@@ -64,23 +74,23 @@ function Admin() {
   return (
     <>
       <div className="wrapper">
-        <Sidebar color={color} image={hasImage ? image : ""} routes={routes} />
-        <div className="main-panel" ref={mainPanel}>
-          <AdminNavbar />
+        {user.loggedIn && <Sidebar color={color} image={hasImage ? image : ""} routes={routes} />}
+        <div className={user.loggedIn && "main-panel"} ref={mainPanel}>
+          {user.loggedIn && <AdminNavbar />}
           <div className="content">
             <Switch>{getRoutes(routes)}</Switch>
           </div>
-          <Footer />
+          {user.loggedIn && <Footer />}
         </div>
       </div>
-      <FixedPlugin
+     {user.loggedIn &&  <FixedPlugin
         hasImage={hasImage}
         setHasImage={() => setHasImage(!hasImage)}
         color={color}
         setColor={(color) => setColor(color)}
         image={image}
         setImage={(image) => setImage(image)}
-      />
+      />}
     </>
   );
 }
