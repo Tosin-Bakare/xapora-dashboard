@@ -15,7 +15,7 @@ const Login = () => {
                 <div className="mt-2">
             <p>Email</p>
             <input
-              className="w-full text-sm py-2 shadow-md border-gray-300 focus:outline-none focus:border-gray-900 p-2"
+              className="w-full text-sm py-2 shadow-md border-gray-300 focus:outline-none focus:border-pink-400 p-2"
               type=""
               name="email"
               placeholder="john@wick.me"
@@ -43,7 +43,7 @@ const Login = () => {
             <div className="mt-10">
               <button
                 type="submit"
-                className="bg-gray-900 text-gray-100 p-4 w-full  tracking-wide font-semibold focus:outline-none focus:shadow-outline hover:bg-blue-700"
+                className="bg-pink-400 text-gray-100 p-4 w-full  tracking-wide font-semibold focus:outline-none focus:shadow-outline hover:bg-pink-800"
               >
                 LOGIN
               </button>

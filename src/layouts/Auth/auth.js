@@ -15,8 +15,8 @@ const Auth = () => {
             </div>
             <div className='lg:w-2/6 md:w-2/4 sm:w-2/3 h-4/5 bg-gray-100 mx-auto my-24  '>
             <div className='flex justify-around'>
-                <button className={`p-4 w-1/2 ${authMethod === "login"? "text-gray-800 border-b-2 border-gray-800 " : "" } text-gray-400`} checked={authMethod === "login"} onClick={() => setAuthMethod("login")} >Login</button>
-                <button className={`p-4 w-1/2 ${authMethod === "signup"? "text-gray-800 border-b-2 border-gray-800 " : "" } text-gray-400`}checked={authMethod === "signup"} onClick={() => setAuthMethod("signup")}>Sign up</button>
+                <button className={`p-4 w-1/2 ${authMethod === "login"? "text-gray-800 border-b-2 border-pink-400 " : "" } text-gray-400`} checked={authMethod === "login"} onClick={() => setAuthMethod("login")} >Login</button>
+                <button className={`p-4 w-1/2 ${authMethod === "signup"? "text-gray-800 border-b-2 border-pink-400 " : "" } text-gray-400`}checked={authMethod === "signup"} onClick={() => setAuthMethod("signup")}>Sign up</button>
             </div>
             {
                 authMethod === "login" ? <Login/> : null
